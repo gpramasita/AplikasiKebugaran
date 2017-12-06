@@ -71,18 +71,6 @@
         android:text="hitung BMI"
         />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/tvRekomendasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>
