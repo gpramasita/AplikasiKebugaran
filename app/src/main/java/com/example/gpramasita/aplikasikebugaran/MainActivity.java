@@ -40,21 +40,21 @@ public class MainActivity extends AppCompatActivity {
         String bmiLabel = "";
 
         if (Float.compare(bmi, 15f) <= 0) {
-            bmiLabel = "sangat sangat kurus";
+            bmiLabel = "Sangat Sangat Kurus \n\n Rekomendasi: Perbanyak konsumsi protein hewani dan serat";
         } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
-            bmiLabel = "sangat kurus";
+            bmiLabel = "Sangat Kurus \n\n Rekomendasi: Perbanyak konsumsi protein hewani dan serat";
         } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
-            bmiLabel = "kurus";
+            bmiLabel = "Kurus \n\n Rekomendasi: Perbanyak konsumsi protein hewani dan serat";
         } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
-            bmiLabel = "normal";
+            bmiLabel = "Normal \n\n Rekomendasi: Pertahankan konsumsi protein hewani dan serat";
         } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
-            bmiLabel = "gemuk";
+            bmiLabel = "Gemuk \n\n Rekomendasi: Kurangi konsumsi protein hewani dan perbanyak serat";
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
-            bmiLabel = "obesitas tingkat I";
+            bmiLabel = "Obesitas Tingkat I \n\n Rekomendasi: Kurangi konsumsi protein hewani dan perbanyak serat";
         } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
-            bmiLabel = "obesitas tingkat II";
+            bmiLabel = "Obesitas Tingkat II \n\n Rekomendasi: Kurangi konsumsi protein hewani dan perbanyak serat";
         } else {
-            bmiLabel = "obesitas tingkat III";
+            bmiLabel = "Obesitas Tingkat III \n\n Rekomendasi: Kurangi konsumsi protein hewani dan perbanyak serat";
         }
         bmiLabel = bmi+ "\n\n" + bmiLabel;
         result.setText(bmiLabel);
