@@ -5,35 +5,40 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText height;
-    private EditText weight;
-    private Button hitung;
+    private Button ideal;
+    private Button bbmi;
+    float bmi = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        height = (EditText) findViewById(R.id.height);
-        weight = (EditText) findViewById(R.id.weight);
-        hitung = (Button) findViewById(R.id.calc);
+        bbmi = (Button) findViewById(R.id.bmi);
+        ideal = (Button) findViewById(R.id.ideal);
 
-        hitung.setOnClickListener(this);
+        bbmi.setOnClickListener(this);
+        ideal.setOnClickListener(this);
+
+        Intent intentBMI = this.getIntent();
+        bmi = intentBMI.getFloatExtra("bmi", 0);
     }
-
-
 
     @Override
     public void onClick(View v) {
-        Intent i = new Intent(this, OutputBMI.class);
-
-        i.putExtra("height", height.getText().toString());
-        i.putExtra("weight", weight.getText().toString());
-
-        startActivity(i);
+        switch (v.getId()){
+            case R.id.bmi:
+                Intent b = new Intent(this, InputBMI.class);
+                startActivity(b);
+                break;
+            case R.id.ideal:
+                Intent i = new Intent(this, Ideal.class);
+                i.putExtra("bmi", bmi);
+                startActivity(i);
+                break;
+        }
     }
 }
