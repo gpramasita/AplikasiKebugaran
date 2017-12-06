@@ -40,6 +40,8 @@ public class Ideal extends AppCompatActivity implements View.OnClickListener {
 
         calc.setOnClickListener(this);
 
+
+
     }
 
     @Override
@@ -58,20 +60,19 @@ public class Ideal extends AppCompatActivity implements View.OnClickListener {
                 this.rbTerpilih = (RadioButton) findViewById(selectedId);
 //            gender = this.rbTerpilih.getText().toString();
 
-
             if (rbPria.isChecked()){
                 ideal = (heightValue - 100) - (((heightValue - 100)/100) * 10);
-
-
-
             }else if(rbWanita.isChecked()){
                 ideal = (heightValue - 100) - (((heightValue - 100)/100) * 15);
-
-
-
             }
-            idealLabel = "berat ideal anda adalah " + ideal + " kg";
-            result.setText(idealLabel);
+            Intent i = new Intent(this, HasilIdeal.class);
+
+            i.putExtra("ideal", ideal);
+
+
+            startActivity(i);
+
+
 //            float ideal = (heightValue - 100) - (((heightValue - 100)/100) * 10);
 //
 //            idealLabel = "berat ideal anda adalah " + ideal + " kg";

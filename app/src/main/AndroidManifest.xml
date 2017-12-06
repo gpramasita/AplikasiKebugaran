@@ -19,6 +19,7 @@
         <activity android:name=".InputBMI"></activity>
         <activity android:name=".OutputBMI"></activity>
         <activity android:name=".Ideal"></activity>
+        <activity android:name="HasilIdeal"></activity>
     </application>
 
 </manifest>
